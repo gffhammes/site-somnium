@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <main>
-        <Stack gap={10}>
+        <Stack gap={10} sx={{ height: "500vh" }}>
           <HeroSection />
 
           <Stack>

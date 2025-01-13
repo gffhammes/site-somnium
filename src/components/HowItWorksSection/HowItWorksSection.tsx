@@ -9,3 +9,11 @@ export const HowItWorksSection = (props: IHowItWorksSectionProps) => {
     </>
   );
 };
+
+export const timelineItems = [
+  "Reunião de Setup",
+  "Captação de Documentos",
+  "Processamento do Financeiro",
+  "Envio do Relatório",
+  "Tomada de Decisão",
+];

@@ -1,7 +1,7 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import icon1 from "../../../public/images/moeda 2.png";
 import icon2 from "../../../public/images/info 2.png";
-import icon3 from "../../../public/images/gráfico 2.png";
+import icon3 from "../../../public/images/grafico 2.png";
 import mobileImage from "../../../public/images/Group 46.png";
 import Image from "next/image";
 

@@ -102,7 +102,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import { timelineItems } from "./HowItWorksSection";
 
 export const MobileTimeline = () => {
-  const [activeIndex, setActiveIndex] = useState(-1);
+  const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef(null);
   const observerRef = useRef<any>(null); // Referência para o Intersection Observer
 
@@ -112,7 +112,7 @@ export const MobileTimeline = () => {
 
     items.forEach((item, index) => {
       const rect = item.getBoundingClientRect();
-      const offset = (windowHeight / 3) * 2;
+      const offset = windowHeight / 2 + 100;
 
       if (rect.top < offset && rect.bottom > offset) {
         setActiveIndex(index);

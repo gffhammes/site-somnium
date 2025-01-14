@@ -1,4 +1,7 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
+import jonathan from "../../../public/images/Jonathan - LP.png";
+import silvia from "../../../public/images/IMG_3271.jpg";
+import Image from "next/image";
 
 export interface IAboutSectionProps {}
 
@@ -20,21 +23,57 @@ export const AboutSection = (props: IAboutSectionProps) => {
           </Typography>
 
           <Stack direction="row" gap={2}>
-            <Box
+            <Stack
               sx={{
                 height: "20rem",
                 flex: "1 1 100%",
-                backgroundColor: "grey",
               }}
-            ></Box>
+              alignItems="center"
+              gap={2}
+            >
+              <Box
+                sx={{
+                  position: "relative",
+                  height: "100%",
+                  width: "100%",
+                }}
+              >
+                <Image
+                  src={jonathan.src}
+                  alt="Jonathan Machado"
+                  fill
+                  objectFit="cover"
+                />
+              </Box>
 
-            <Box
+              <Typography>Jonathan Machado</Typography>
+            </Stack>
+
+            <Stack
               sx={{
                 height: "20rem",
                 flex: "1 1 100%",
-                backgroundColor: "grey",
               }}
-            ></Box>
+              alignItems="center"
+              gap={2}
+            >
+              <Box
+                sx={{
+                  position: "relative",
+                  height: "100%",
+                  width: "100%",
+                }}
+              >
+                <Image
+                  src={silvia.src}
+                  alt="Silvia Machado"
+                  fill
+                  objectFit="cover"
+                />
+              </Box>
+
+              <Typography>Silvia Machado</Typography>
+            </Stack>
           </Stack>
         </Stack>
       </Container>

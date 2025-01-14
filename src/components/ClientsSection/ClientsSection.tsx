@@ -1,4 +1,11 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
+import logo1 from "../../../public/images/clientes/logo-2048x1850.png";
+import logo2 from "../../../public/images/clientes/Input-Logo.webp";
+import logo3 from "../../../public/images/clientes/logo-2048x1850.png";
+import logo4 from "../../../public/images/clientes/Input-Logo.webp";
+import logo5 from "../../../public/images/clientes/logo-2048x1850.png";
+import logo6 from "../../../public/images/clientes/Input-Logo.webp";
+import Image from "next/image";
 
 export interface IClientsSectionProps {}
 
@@ -11,7 +18,35 @@ export const ClientsSection = (props: IClientsSectionProps) => {
             Confira quem já confiou no nosso trabalho:
           </Typography>
 
-          <Stack>teste</Stack>
+          <Box
+            display="grid"
+            gridTemplateColumns="1fr 1fr"
+            gridAutoRows="8rem"
+            gap={4}
+          >
+            {clients.map((client) => (
+              <Box
+                key={client.name}
+                sx={{
+                  position: "relative",
+                  width: "100%",
+                  filter: "saturate(0)",
+                  transition: ".3s ease all",
+
+                  "&:hover": {
+                    filter: "saturate(1)",
+                  },
+                }}
+              >
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  fill
+                  objectFit="contain"
+                />
+              </Box>
+            ))}
+          </Box>
 
           <Button variant="contained" color="secondary" sx={{ mx: "auto" }}>
             Seja o próximo a fazer parte disso!
@@ -21,3 +56,30 @@ export const ClientsSection = (props: IClientsSectionProps) => {
     </Box>
   );
 };
+
+const clients = [
+  {
+    logo: logo1.src,
+    name: "Roda Pizza Araldi",
+  },
+  {
+    logo: logo2.src,
+    name: "Input Gestão de Tráfego",
+  },
+  {
+    logo: logo4.src,
+    name: "Input Gestão de Tráfego2",
+  },
+  {
+    logo: logo3.src,
+    name: "Roda Pizza Araldi2",
+  },
+  {
+    logo: logo5.src,
+    name: "Roda Pizza Araldi3",
+  },
+  {
+    logo: logo6.src,
+    name: "Input Gestão de Tráfego3",
+  },
+];

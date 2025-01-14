@@ -16,19 +16,26 @@ export const HowWeCanHelpSectionMobile = (
     <Box>
       <Container>
         <Stack direction="row" gap={4} justifyContent="space-between">
-          <Stack
-            alignItems="flex-start"
-            gap={4}
-            sx={{ position: "sticky", top: 50 }}
-          >
-            <Typography variant="h2" maxWidth="10ch">
-              Como vamos te ajudar:
-            </Typography>
+          <Box sx={{ maxHeight: "20rem", pt: 2 }}>
+            <Stack
+              alignItems="flex-start"
+              gap={4}
+              sx={{
+                position: "sticky",
+                top: 100,
+                height: "fit-content",
+                zIndex: 99,
+              }}
+            >
+              <Typography variant="h2" maxWidth="10ch">
+                Como vamos te ajudar:
+              </Typography>
 
-            <Button variant="contained" color="secondary">
-              Conheça nossos planos
-            </Button>
-          </Stack>
+              <Button variant="contained" color="secondary">
+                Saiba mais
+              </Button>
+            </Stack>
+          </Box>
 
           <Stack gap={4}>
             {items.map((item) => (
@@ -51,7 +58,7 @@ export const HowWeCanHelpSectionMobile = (
           position: "relative",
           width: "80%",
           aspectRatio: imageAspectRatio,
-          mt: -30,
+          mt: -20,
           transform: "translateX(-25px)",
         }}
       >

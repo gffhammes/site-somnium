@@ -105,14 +105,14 @@ export const MobileTimeline = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef(null);
   const observerRef = useRef<any>(null); // Referência para o Intersection Observer
+  const [viewportHeight] = useState(window.innerHeight); // Captura inicial da altura
 
   const handleScroll = () => {
     const items = document.querySelectorAll(".timeline-item");
-    const windowHeight = window.innerHeight;
 
     items.forEach((item, index) => {
       const rect = item.getBoundingClientRect();
-      const offset = windowHeight / 2 + 100;
+      const offset = viewportHeight / 2 + 100;
 
       if (rect.top < offset && rect.bottom > offset) {
         setActiveIndex(index);

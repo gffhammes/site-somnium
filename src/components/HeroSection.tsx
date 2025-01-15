@@ -63,7 +63,11 @@ export const HeroSection = (props: IHeroSectionProps) => {
           transform: "translate(-50%, -50%)",
         }}
       >
-        <Button variant="contained" color="secondary">
+        <Button
+          variant="contained"
+          color="secondary"
+          sx={{ whiteSpace: "nowrap" }}
+        >
           Clique aqui e saiba mais!
         </Button>
       </Box>

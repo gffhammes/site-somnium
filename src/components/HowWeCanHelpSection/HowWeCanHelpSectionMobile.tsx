@@ -79,6 +79,6 @@ const items = [
   },
   {
     icon: icon3.src,
-    text: "Vamos te ajudar a <strong>lucrar mais!</strong>",
+    text: "Vamos te ajudar a<br/><strong>lucrar mais!</strong>",
   },
 ];

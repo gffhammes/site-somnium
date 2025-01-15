@@ -104,8 +104,8 @@ import { timelineItems } from "./HowItWorksSection";
 export const MobileTimeline = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef(null);
-  const observerRef = useRef<any>(null); // Referência para o Intersection Observer
-  const [viewportHeight] = useState(window.innerHeight); // Captura inicial da altura
+  const observerRef = useRef<any>(null);
+  const [viewportHeight, setViewportHeight] = useState(0);
 
   const handleScroll = () => {
     const items = document.querySelectorAll(".timeline-item");
@@ -121,6 +121,8 @@ export const MobileTimeline = () => {
   };
 
   useEffect(() => {
+    setViewportHeight(window.innerHeight);
+
     const observeVisibility = (entries: any) => {
       const [entry] = entries;
 

@@ -7,6 +7,7 @@ import { HowItWorksSection } from "@/components/HowItWorksSection/HowItWorksSect
 import { HowWeCanHelpSection } from "@/components/HowWeCanHelpSection/HowWeCanHelpSection";
 import { ProfitSection } from "@/components/ProfitSection/ProfitSection";
 import { SocialSection } from "@/components/SocialSection/SocialSection";
+import { WhatWeDoSection } from "@/components/WhatWeDoSection/WhatWeDoSection";
 import { Stack } from "@mui/material";
 
 export default function Home() {
@@ -15,6 +16,8 @@ export default function Home() {
       <main>
         <Stack gap={10} sx={{ pb: 10 }}>
           <HeroSection />
+
+          <WhatWeDoSection />
 
           <Stack>
             <HowWeCanHelpSection />

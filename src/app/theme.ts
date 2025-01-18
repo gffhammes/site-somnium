@@ -14,13 +14,24 @@ const theme = createTheme({
     h1: {
       fontSize: 16,
       fontWeight: 500,
+      "@media (min-width:600px)": {
+        fontSize: 32,
+      },
     },
     h2: {
       fontSize: 24,
       fontWeight: 700,
+
+      "@media (min-width:600px)": {
+        fontSize: 48,
+      },
     },
     button: {
       fontWeight: 700,
+
+      "@media (min-width:600px)": {
+        fontSize: 24,
+      },
     },
   },
   palette: {

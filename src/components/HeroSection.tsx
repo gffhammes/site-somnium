@@ -12,7 +12,7 @@ export const HeroSection = (props: IHeroSectionProps) => {
     <Box
       sx={{
         position: "relative",
-        height: "50vh",
+        height: { xs: "50vh", md: "60vh" },
         backgroundImage: `url("${bgImage.src}")`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -35,20 +35,25 @@ export const HeroSection = (props: IHeroSectionProps) => {
           alignItems="center"
           justifyContent="center"
           sx={{ height: "100%" }}
-          gap={4}
+          gap={{ xs: 4, md: 8 }}
         >
           <Box
             sx={{
               position: "relative",
               width: "100%",
-              maxWidth: "15rem",
+              maxWidth: { xs: "15rem", md: "25rem" },
               aspectRatio: logoAspectRatio,
             }}
           >
             <Image src={logo.src} alt="Somnium" fill />
           </Box>
 
-          <Typography variant="h1" textAlign="center" color="white">
+          <Typography
+            variant="h1"
+            textAlign="center"
+            color="white"
+            maxWidth="40ch"
+          >
             Chega de se preocupar com as tarefas financeiras, hora de focar no{" "}
             <strong>crescimento do seu negócio!</strong>
           </Typography>

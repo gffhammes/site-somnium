@@ -1,9 +1,7 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import icon1 from "../../../public/images/moeda 2.png";
-import icon2 from "../../../public/images/info 2.png";
-import icon3 from "../../../public/images/grafico 2.png";
 import mobileImage from "../../../public/images/Group 46.png";
 import Image from "next/image";
+import { howWeCanHelpItems } from "./HowWeCanHelpSection";
 
 export interface IHowWeCanHelpSectionMobileProps {}
 
@@ -38,7 +36,7 @@ export const HowWeCanHelpSectionMobile = (
           </Box>
 
           <Stack gap={4}>
-            {items.map((item) => (
+            {howWeCanHelpItems.map((item) => (
               <Stack alignItems="center" gap={2}>
                 <Image src={item.icon} alt="" height={100} width={100} />
 
@@ -67,18 +65,3 @@ export const HowWeCanHelpSectionMobile = (
     </Box>
   );
 };
-
-const items = [
-  {
-    icon: icon1.src,
-    text: "Controlar cada centavo que <strong>entra e sai</strong>",
-  },
-  {
-    icon: icon2.src,
-    text: "Prestar informações que indiquem o <strong>caminho do crescimento</strong>",
-  },
-  {
-    icon: icon3.src,
-    text: "Vamos te ajudar a<br/><strong>lucrar mais!</strong>",
-  },
-];

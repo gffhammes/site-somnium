@@ -2,6 +2,7 @@ import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import logo from "../../public/images/logo-somnium.png";
 import bgImage from "../../public/images/79b7c0b7b91ddd1b2e8ae52151915909.png";
+import { ScrollButton } from "./ScrollButton";
 
 export interface IHeroSectionProps {}
 
@@ -68,13 +69,14 @@ export const HeroSection = (props: IHeroSectionProps) => {
           transform: "translate(-50%, -50%)",
         }}
       >
-        <Button
+        <ScrollButton
           variant="contained"
           color="secondary"
           sx={{ whiteSpace: "nowrap" }}
+          targetSection="conteudo"
         >
           Clique aqui e saiba mais!
-        </Button>
+        </ScrollButton>
       </Box>
     </Box>
   );

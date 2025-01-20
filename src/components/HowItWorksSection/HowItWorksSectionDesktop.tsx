@@ -2,6 +2,7 @@ import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { MobileTimeline } from "./MobileTimeline";
 import bgPattern from "../../../public/images/background 1.png";
 import { DesktopTimeline } from "./DesktopTimeline";
+import { ScrollButton } from "../ScrollButton";
 
 export interface IHowItWorksSectionDesktopProps {}
 
@@ -33,7 +34,9 @@ export const HowItWorksSectionDesktop = (
 
           <DesktopTimeline />
 
-          <Button variant="contained">Entre já em contato!</Button>
+          <ScrollButton targetSection="contato" variant="contained">
+            Entre já em contato!
+          </ScrollButton>
         </Stack>
       </Container>
     </Box>

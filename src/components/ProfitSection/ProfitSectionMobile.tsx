@@ -1,6 +1,7 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import mobileImage from "../../../public/images/Group 47.png";
+import { ScrollButton } from "../ScrollButton";
 
 export interface IProfitSectionMobileProps {}
 
@@ -15,9 +16,13 @@ export const ProfitSectionMobile = (props: IProfitSectionMobileProps) => {
             A sua empresa lucra <strong>como deveria lucrar?</strong>
           </Typography>
 
-          <Button variant="contained" color="secondary">
+          <ScrollButton
+            targetSection="contato"
+            variant="contained"
+            color="secondary"
+          >
             Vamos descobrir juntos!
-          </Button>
+          </ScrollButton>
         </Stack>
       </Container>
 

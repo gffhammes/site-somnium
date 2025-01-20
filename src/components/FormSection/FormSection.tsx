@@ -37,7 +37,7 @@ export const FormSection = (props: IFormSectionProps) => {
   };
 
   return (
-    <Box sx={{ backgroundColor: "primary.main", py: 10 }}>
+    <Box sx={{ backgroundColor: "primary.main", py: 10 }} id="contato">
       <Container maxWidth="sm">
         <Stack gap={4}>
           <Typography variant="h2" color="white">

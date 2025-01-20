@@ -2,6 +2,7 @@ import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import mobileImage from "../../../public/images/Group 46.png";
 import Image from "next/image";
 import { howWeCanHelpItems } from "./HowWeCanHelpSection";
+import { ScrollButton } from "../ScrollButton";
 
 export interface IHowWeCanHelpSectionDesktopProps {}
 
@@ -51,9 +52,13 @@ export const HowWeCanHelpSectionDesktop = (
               </Stack>
             </Stack>
 
-            <Button variant="contained" color="secondary">
+            <ScrollButton
+              targetSection="contato"
+              variant="contained"
+              color="secondary"
+            >
               Conheça nossos planos{" "}
-            </Button>
+            </ScrollButton>
           </Stack>
         </Stack>
       </Container>

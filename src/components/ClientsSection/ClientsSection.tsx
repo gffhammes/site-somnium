@@ -6,6 +6,7 @@ import logo4 from "../../../public/images/clientes/Input-Logo.webp";
 import logo5 from "../../../public/images/clientes/logo-2048x1850.png";
 import logo6 from "../../../public/images/clientes/Input-Logo.webp";
 import Image from "next/image";
+import { ScrollButton } from "../ScrollButton";
 
 export interface IClientsSectionProps {}
 
@@ -48,9 +49,14 @@ export const ClientsSection = (props: IClientsSectionProps) => {
             ))}
           </Box>
 
-          <Button variant="contained" color="secondary" sx={{ mx: "auto" }}>
+          <ScrollButton
+            targetSection="contato"
+            variant="contained"
+            color="secondary"
+            sx={{ mx: "auto" }}
+          >
             Seja o próximo a fazer parte disso!
-          </Button>
+          </ScrollButton>
         </Stack>
       </Container>
     </Box>

@@ -8,7 +8,7 @@ export interface IAboutSectionProps {}
 export const AboutSection = (props: IAboutSectionProps) => {
   return (
     <Box>
-      <Container>
+      <Container maxWidth="md">
         <Stack gap={4}>
           <Typography variant="h2">Um pouco sobre nós!</Typography>
 
@@ -25,7 +25,7 @@ export const AboutSection = (props: IAboutSectionProps) => {
           <Stack direction="row" gap={2}>
             <Stack
               sx={{
-                height: "20rem",
+                height: { xs: "20rem", md: "30rem" },
                 flex: "1 1 100%",
               }}
               alignItems="center"
@@ -51,7 +51,7 @@ export const AboutSection = (props: IAboutSectionProps) => {
 
             <Stack
               sx={{
-                height: "20rem",
+                height: { xs: "20rem", md: "30rem" },
                 flex: "1 1 100%",
               }}
               alignItems="center"

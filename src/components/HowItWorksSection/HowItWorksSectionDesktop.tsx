@@ -18,7 +18,7 @@ export const HowItWorksSectionDesktop = (
         backgroundPosition: "right",
       }}
     >
-      <Container>
+      <Container maxWidth="md">
         <Stack gap={8} alignItems="flex-start">
           <Stack gap={8} direction="row" alignItems="center">
             <Typography variant="h2" color="primary" maxWidth="15ch">

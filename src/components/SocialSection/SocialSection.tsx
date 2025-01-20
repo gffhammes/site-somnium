@@ -12,7 +12,7 @@ export const SocialSection = (props: ISocialSectionProps) => {
   return (
     <Box>
       <Container>
-        <Stack alignItems="center" gap={8}>
+        <Stack alignItems="center" gap={{ xs: 8, md: 12 }}>
           <Typography variant="h2" textAlign="center" maxWidth="18ch">
             Nos siga também em nossas redes sociais!
           </Typography>
@@ -26,7 +26,7 @@ export const SocialSection = (props: ISocialSectionProps) => {
                 href={social.target}
                 target="_blank"
               >
-                <Box sx={{ fontSize: 80 }}>
+                <Box sx={{ fontSize: { xs: 80, md: 160 } }}>
                   <social.icon color="primary" fontSize="inherit" />
                 </Box>
 
@@ -41,8 +41,9 @@ export const SocialSection = (props: ISocialSectionProps) => {
             sx={{
               position: "relative",
               width: "100%",
-              maxWidth: "10rem",
+              maxWidth: { xs: "10rem", md: "30rem" },
               aspectRatio: logoAspectRatio,
+              display: { xs: "block", md: "none" },
             }}
           >
             <Image src={logo.src} alt="Somnium" fill />

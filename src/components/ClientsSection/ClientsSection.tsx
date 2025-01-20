@@ -13,16 +13,16 @@ export const ClientsSection = (props: IClientsSectionProps) => {
   return (
     <Box>
       <Container>
-        <Stack gap={4}>
+        <Stack gap={{ xs: 4, md: 10 }}>
           <Typography variant="h2" maxWidth="20ch">
             Confira quem já confiou no nosso trabalho:
           </Typography>
 
           <Box
             display="grid"
-            gridTemplateColumns="1fr 1fr"
+            gridTemplateColumns={{ xs: "1fr 1fr", md: "1fr 1fr 1fr" }}
             gridAutoRows="8rem"
-            gap={4}
+            gap={{ xs: 4, md: 10 }}
           >
             {clients.map((client) => (
               <Box

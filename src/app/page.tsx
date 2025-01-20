@@ -1,5 +1,6 @@
 import { AboutSection } from "@/components/AboutSection/AboutSection";
 import { ClientsSection } from "@/components/ClientsSection/ClientsSection";
+import { DiretoRow } from "@/components/DiretoRow";
 import { Footer } from "@/components/Footer/Footer";
 import { FormSection } from "@/components/FormSection/FormSection";
 import { HeroSection } from "@/components/HeroSection";
@@ -14,7 +15,7 @@ export default function Home() {
   return (
     <div>
       <main>
-        <Stack gap={10} sx={{ pb: 10 }}>
+        <Stack gap={{ xs: 10, md: 20 }} sx={{ pb: { xs: 10, md: 20 } }}>
           <HeroSection />
 
           <WhatWeDoSection />
@@ -38,6 +39,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <DiretoRow />
     </div>
   );
 }

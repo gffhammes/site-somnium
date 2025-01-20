@@ -38,7 +38,7 @@ export const FormSection = (props: IFormSectionProps) => {
 
   return (
     <Box sx={{ backgroundColor: "primary.main", py: 10 }}>
-      <Container>
+      <Container maxWidth="sm">
         <Stack gap={4}>
           <Typography variant="h2" color="white">
             Acha que podemos lhe ajudar? Fale conosco!
@@ -68,6 +68,7 @@ export const FormSection = (props: IFormSectionProps) => {
                   textFieldProps={{
                     multiline: true,
                     placeholder: "Conta pra gente! O que você precisa?",
+                    rows: 4,
                   }}
                 />
 

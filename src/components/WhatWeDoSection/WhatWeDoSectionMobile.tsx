@@ -3,6 +3,7 @@
 import { Container, Stack, Typography } from "@mui/material";
 import { WhatWeDoAccordion } from "./WhatWeDoAccordion";
 import { useState } from "react";
+import { whatWeDoItems } from "./WhatWeDoSection";
 
 export interface IWhatWeDoSectionMobileProps {}
 
@@ -17,7 +18,7 @@ export const WhatWeDoSectionMobile = (props: IWhatWeDoSectionMobileProps) => {
         </Typography>
 
         <Stack gap={2}>
-          {items.map((item, index) => (
+          {whatWeDoItems.map((item, index) => (
             <WhatWeDoAccordion
               key={item.title}
               title={item.title}
@@ -31,30 +32,3 @@ export const WhatWeDoSectionMobile = (props: IWhatWeDoSectionMobileProps) => {
     </Container>
   );
 };
-
-const items = [
-  {
-    title: "Implantação e treinamento",
-    text: "Lorem ipsum dolor sit amet, onsectetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    title: "Acompanhamento de métricas e resultados",
-    text: "Lorem ipsum dolor sit amet, onsectetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    title: "Gestão de contas a pagar",
-    text: "Lorem ipsum dolor sit amet, onsectetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    title: "Análise financeira da saúde da empresa",
-    text: "Lorem ipsum dolor sit amet, onsectetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    title: "Conciliação bancária e de caixa",
-    text: "Lorem ipsum dolor sit amet, onsectetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    title: "Lorem ipsum",
-    text: "Lorem ipsum dolor sit amet, onsectetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-];

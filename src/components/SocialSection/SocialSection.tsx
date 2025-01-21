@@ -41,7 +41,7 @@ export const SocialSection = (props: ISocialSectionProps) => {
             sx={{
               position: "relative",
               width: "100%",
-              maxWidth: { xs: "10rem", md: "30rem" },
+              maxWidth: { xs: "10rem", sm: "30rem" },
               aspectRatio: logoAspectRatio,
               display: { xs: "block", md: "none" },
             }}

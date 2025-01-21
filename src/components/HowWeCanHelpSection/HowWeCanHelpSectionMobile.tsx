@@ -13,7 +13,7 @@ export const HowWeCanHelpSectionMobile = (
 
   return (
     <Box>
-      <Container>
+      <Container maxWidth="sm">
         <Stack direction="row" gap={4} justifyContent="space-between">
           <Box sx={{ maxHeight: "20rem", pt: 2 }}>
             <Stack
@@ -59,7 +59,7 @@ export const HowWeCanHelpSectionMobile = (
       <Box
         sx={{
           position: "relative",
-          width: "80%",
+          width: { xs: "80%", sm: "50%" },
           aspectRatio: imageAspectRatio,
           mt: -20,
           transform: "translateX(-25px)",

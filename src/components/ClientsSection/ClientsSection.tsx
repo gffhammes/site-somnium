@@ -14,7 +14,7 @@ export const ClientsSection = (props: IClientsSectionProps) => {
   return (
     <Box>
       <Container>
-        <Stack gap={{ xs: 4, md: 10 }}>
+        <Stack gap={{ xs: 4, sm: 8, md: 10 }}>
           <Typography variant="h2" maxWidth="20ch">
             Confira quem já confiou no nosso trabalho:
           </Typography>

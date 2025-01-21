@@ -25,7 +25,7 @@ export const AboutSection = (props: IAboutSectionProps) => {
           <Stack direction="row" gap={2}>
             <Stack
               sx={{
-                height: { xs: "20rem", md: "30rem" },
+                height: { xs: "20rem", sm: "30rem" },
                 flex: "1 1 100%",
               }}
               alignItems="center"
@@ -51,7 +51,7 @@ export const AboutSection = (props: IAboutSectionProps) => {
 
             <Stack
               sx={{
-                height: { xs: "20rem", md: "30rem" },
+                height: { xs: "20rem", sm: "30rem" },
                 flex: "1 1 100%",
               }}
               alignItems="center"

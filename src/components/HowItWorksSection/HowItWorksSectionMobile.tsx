@@ -18,7 +18,7 @@ export const HowItWorksSectionMobile = (
         backgroundPosition: "right",
       }}
     >
-      <Container>
+      <Container maxWidth="sm">
         <Stack gap={8} alignItems="flex-start">
           <Stack gap={2}>
             <Typography variant="h2" color="primary" maxWidth="15ch">

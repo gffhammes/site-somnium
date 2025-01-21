@@ -11,7 +11,7 @@ export const WhatWeDoSectionMobile = (props: IWhatWeDoSectionMobileProps) => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <Container>
+    <Container maxWidth="sm">
       <Stack gap={2}>
         <Typography variant="h2" textAlign="center">
           O que fazemos:

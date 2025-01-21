@@ -10,7 +10,7 @@ export const ProfitSectionMobile = (props: IProfitSectionMobileProps) => {
 
   return (
     <Stack alignItems="flex-end" gap={4}>
-      <Container>
+      <Container maxWidth="sm">
         <Stack alignItems="flex-start" gap={2}>
           <Typography variant="h2" fontWeight={400} maxWidth="20ch">
             A sua empresa lucra <strong>como deveria lucrar?</strong>
@@ -29,7 +29,7 @@ export const ProfitSectionMobile = (props: IProfitSectionMobileProps) => {
       <Box
         sx={{
           position: "relative",
-          width: { xs: "90%", md: "20%" },
+          width: { xs: "90%", sm: "60%", md: "20%" },
           aspectRatio: imageAspectRatio,
         }}
       >

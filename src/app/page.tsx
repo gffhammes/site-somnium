@@ -15,7 +15,10 @@ export default function Home() {
   return (
     <div>
       <main>
-        <Stack gap={{ xs: 10, md: 20 }} sx={{ pb: { xs: 10, md: 20 } }}>
+        <Stack
+          gap={{ xs: 10, sm: 15, md: 20 }}
+          sx={{ pb: { xs: 10, sm: 15, md: 20 } }}
+        >
           <HeroSection />
 
           <WhatWeDoSection />

@@ -74,6 +74,7 @@ export const HeroSection = (props: IHeroSectionProps) => {
           color="secondary"
           sx={{ whiteSpace: "nowrap" }}
           targetSection="conteudo"
+          offset={-50}
         >
           Clique aqui e saiba mais!
         </ScrollButton>

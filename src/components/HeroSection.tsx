@@ -3,6 +3,7 @@ import Image from "next/image";
 import logo from "../../public/images/logo-somnium.png";
 import bgImage from "../../public/images/79b7c0b7b91ddd1b2e8ae52151915909.png";
 import { ScrollButton } from "./ScrollButton";
+import { Animate } from "./Animate";
 
 export interface IHeroSectionProps {}
 
@@ -49,15 +50,21 @@ export const HeroSection = (props: IHeroSectionProps) => {
             <Image src={logo.src} alt="Somnium" fill />
           </Box>
 
-          <Typography
-            variant="h1"
-            textAlign="center"
-            color="white"
-            maxWidth="40ch"
+          <Animate
+            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 25 }}
+            transition={{ duration: 1 }}
           >
-            Chega de se preocupar com as tarefas financeiras, hora de focar no{" "}
-            <strong>crescimento do seu negócio!</strong>
-          </Typography>
+            <Typography
+              variant="h1"
+              textAlign="center"
+              color="white"
+              maxWidth="40ch"
+            >
+              Chega de se preocupar com as tarefas financeiras, hora de focar no{" "}
+              <strong>crescimento do seu negócio!</strong>
+            </Typography>
+          </Animate>
         </Stack>
       </Container>
 

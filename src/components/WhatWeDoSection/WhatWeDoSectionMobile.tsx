@@ -4,6 +4,7 @@ import { Container, Stack, Typography } from "@mui/material";
 import { WhatWeDoAccordion } from "./WhatWeDoAccordion";
 import { useState } from "react";
 import { whatWeDoItems } from "./WhatWeDoSection";
+import { Animate } from "../Animate";
 
 export interface IWhatWeDoSectionMobileProps {}
 
@@ -19,13 +20,20 @@ export const WhatWeDoSectionMobile = (props: IWhatWeDoSectionMobileProps) => {
 
         <Stack gap={2}>
           {whatWeDoItems.map((item, index) => (
-            <WhatWeDoAccordion
+            <Animate
               key={item.title}
-              title={item.title}
-              text={item.text}
-              open={openIndex === index}
-              onClick={() => setOpenIndex(index)}
-            />
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: index === 0 ? "-40%" : "-25%" }}
+              transition={{ duration: 1 }}
+            >
+              <WhatWeDoAccordion
+                title={item.title}
+                text={item.text}
+                open={openIndex === index}
+                onClick={() => setOpenIndex(index)}
+              />
+            </Animate>
           ))}
         </Stack>
       </Stack>

@@ -3,6 +3,7 @@ import mobileImage from "../../../public/images/Group 46.png";
 import Image from "next/image";
 import { howWeCanHelpItems } from "./HowWeCanHelpSection";
 import { ScrollButton } from "../ScrollButton";
+import { Animate } from "../Animate";
 
 export interface IHowWeCanHelpSectionMobileProps {}
 
@@ -42,15 +43,23 @@ export const HowWeCanHelpSectionMobile = (
 
           <Stack gap={4}>
             {howWeCanHelpItems.map((item) => (
-              <Stack alignItems="center" gap={2}>
-                <Image src={item.icon} alt="" height={100} width={100} />
+              <Animate
+                key={item.text}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-30%" }}
+                transition={{ duration: 1 }}
+              >
+                <Stack alignItems="center" gap={2}>
+                  <Image src={item.icon} alt="" height={100} width={100} />
 
-                <Typography
-                  textAlign="center"
-                  dangerouslySetInnerHTML={{ __html: item.text }}
-                  maxWidth="20ch"
-                />
-              </Stack>
+                  <Typography
+                    textAlign="center"
+                    dangerouslySetInnerHTML={{ __html: item.text }}
+                    maxWidth="20ch"
+                  />
+                </Stack>
+              </Animate>
             ))}
           </Stack>
         </Stack>

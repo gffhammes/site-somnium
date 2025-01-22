@@ -7,6 +7,7 @@ import logo5 from "../../../public/images/clientes/logo-2048x1850.png";
 import logo6 from "../../../public/images/clientes/Input-Logo.webp";
 import Image from "next/image";
 import { ScrollButton } from "../ScrollButton";
+import { Animate } from "../Animate";
 
 export interface IClientsSectionProps {}
 
@@ -25,27 +26,40 @@ export const ClientsSection = (props: IClientsSectionProps) => {
             gridAutoRows="8rem"
             gap={{ xs: 4, md: 10 }}
           >
-            {clients.map((client) => (
-              <Box
+            {clients.map((client, index) => (
+              <Animate
                 key={client.name}
-                sx={{
-                  position: "relative",
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, margin: "-30%" }}
+                transition={{ duration: 1 }}
+                responsiveDelay={{ xs: index * 0.5 }}
+                style={{
                   width: "100%",
-                  filter: "saturate(0)",
-                  transition: ".3s ease all",
-
-                  "&:hover": {
-                    filter: "saturate(1)",
-                  },
+                  height: "100%",
                 }}
               >
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  fill
-                  objectFit="contain"
-                />
-              </Box>
+                <Box
+                  sx={{
+                    position: "relative",
+                    width: "100%",
+                    height: "100%",
+                    filter: "saturate(0)",
+                    transition: ".3s ease all",
+
+                    "&:hover": {
+                      filter: "saturate(1)",
+                    },
+                  }}
+                >
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    fill
+                    objectFit="contain"
+                  />
+                </Box>
+              </Animate>
             ))}
           </Box>
 

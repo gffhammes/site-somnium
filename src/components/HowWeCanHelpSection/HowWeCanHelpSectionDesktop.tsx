@@ -3,6 +3,7 @@ import mobileImage from "../../../public/images/Group 46.png";
 import Image from "next/image";
 import { howWeCanHelpItems } from "./HowWeCanHelpSection";
 import { ScrollButton } from "../ScrollButton";
+import { Animate } from "../Animate";
 
 export interface IHowWeCanHelpSectionDesktopProps {}
 
@@ -37,17 +38,26 @@ export const HowWeCanHelpSectionDesktop = (
               </Typography>
 
               <Stack gap={8} direction="row">
-                {howWeCanHelpItems.map((item) => (
-                  <Stack alignItems="center" gap={2}>
-                    <Image src={item.icon} alt="" height={150} width={150} />
+                {howWeCanHelpItems.map((item, index) => (
+                  <Animate
+                    key={item.text}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-25%" }}
+                    transition={{ duration: 1 }}
+                    responsiveDelay={{ sm: index * 0.5 }}
+                  >
+                    <Stack alignItems="center" gap={2}>
+                      <Image src={item.icon} alt="" height={150} width={150} />
 
-                    <Typography
-                      textAlign="center"
-                      dangerouslySetInnerHTML={{ __html: item.text }}
-                      maxWidth="20ch"
-                      fontSize={24}
-                    />
-                  </Stack>
+                      <Typography
+                        textAlign="center"
+                        dangerouslySetInnerHTML={{ __html: item.text }}
+                        maxWidth="20ch"
+                        fontSize={24}
+                      />
+                    </Stack>
+                  </Animate>
                 ))}
               </Stack>
             </Stack>

@@ -1,3 +1,5 @@
+"use client";
+
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Box, IconButton } from "@mui/material";
 import { getMainWhatsAppLink } from "./utils";

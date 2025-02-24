@@ -7,9 +7,7 @@ import {
   CircularProgress,
   Container,
   Dialog,
-  DialogActions,
   Stack,
-  TextField,
   Typography,
 } from "@mui/material";
 import { Form, Formik, FormikErrors } from "formik";
@@ -18,10 +16,8 @@ import { PhoneInput } from "../Forms/PhoneInput";
 import { validateEmail } from "../utils";
 import { sendEmail } from "@/send-email";
 import { toast } from "react-toastify";
-import LoadingButton from "@mui/lab/LoadingButton";
 import { useState } from "react";
-import Lottie from "react-lottie";
-import animationData from "../../lotties/success.json";
+import { SuccessLottie } from "./SuccessLottie";
 
 export interface IFormSectionProps {}
 
@@ -121,19 +117,8 @@ export const FormSection = (props: IFormSectionProps) => {
       </Backdrop>
 
       <Dialog open={sendingState === "success"}>
-        <Box maxWidth="25rem">
-          <Lottie
-            options={{
-              loop: false,
-              autoplay: true,
-              animationData: animationData,
-              rendererSettings: {
-                preserveAspectRatio: "xMidYMid slice",
-              },
-            }}
-            height="100%"
-            width="100%"
-          />
+        <Box maxWidth="25rem" width="100%" sx={{ aspectRatio: "1 / 1" }}>
+          <SuccessLottie />
         </Box>
 
         <Stack sx={{ px: 4 }} alignItems="center" gap={2}>

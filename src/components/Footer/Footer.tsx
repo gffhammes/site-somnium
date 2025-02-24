@@ -4,6 +4,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import logo from "../../../public/images/logo-somnium.png";
 import Image from "next/image";
+import { getMainWhatsAppLink } from "../utils";
 
 export interface IFooterProps {}
 
@@ -62,7 +63,7 @@ const contactItems = [
   },
   {
     icon: WhatsAppIcon,
-    href: "http://api.whatsapp.com/send?phone=47996537400&text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Somnium!",
+    href: getMainWhatsAppLink(),
     text: "(47) 99653-7400",
   },
   {

@@ -8,6 +8,7 @@ import { HowItWorksSection } from "@/components/HowItWorksSection/HowItWorksSect
 import { HowWeCanHelpSection } from "@/components/HowWeCanHelpSection/HowWeCanHelpSection";
 import { ProfitSection } from "@/components/ProfitSection/ProfitSection";
 import { SocialSection } from "@/components/SocialSection/SocialSection";
+import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
 import { WhatWeDoSection } from "@/components/WhatWeDoSection/WhatWeDoSection";
 import { Stack } from "@mui/material";
 
@@ -39,6 +40,8 @@ export default function Home() {
 
           <SocialSection />
         </Stack>
+
+        <WhatsAppFloatingButton />
       </main>
 
       <Footer />

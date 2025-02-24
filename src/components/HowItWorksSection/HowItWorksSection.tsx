@@ -20,8 +20,8 @@ export const HowItWorksSection = (props: IHowItWorksSectionProps) => {
 
 export const timelineItems = [
   "Reunião de Setup",
-  "Captação de Documentos",
-  "Processamento do Financeiro",
-  "Envio do Relatório",
+  "Captação de acessos e documentação",
+  "Processamento e análise dos dados financeiros",
+  "Apresentação dos Resultados",
   "Tomada de Decisão",
 ];

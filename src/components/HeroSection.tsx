@@ -61,8 +61,8 @@ export const HeroSection = (props: IHeroSectionProps) => {
               color="white"
               maxWidth="40ch"
             >
-              Chega de se preocupar com as tarefas financeiras, hora de focar no{" "}
-              <strong>crescimento do seu negócio!</strong>
+              Chega de se preocupar com a gestão financeira do seu negócio. É
+              hora de focar no <strong>crescimento!</strong>
             </Typography>
           </Animate>
         </Stack>

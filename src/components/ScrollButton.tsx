@@ -2,7 +2,7 @@
 
 import { useBreakpoints } from "@/useBreakpoints";
 import { Button, ButtonProps } from "@mui/material";
-import { scrollTo } from "./utils";
+import { scrollToId } from "./utils";
 
 export interface IScrollButtonProps extends ButtonProps {
   targetSection: string;
@@ -19,7 +19,7 @@ export const ScrollButton = ({
   return (
     <Button
       {...props}
-      onClick={() => scrollTo(targetSection, offset ?? md ? 50 : 0)}
+      onClick={() => scrollToId(targetSection, offset ?? md ? 50 : 0)}
     />
   );
 };

@@ -40,7 +40,7 @@ export const DesktopTimeline = () => {
             >
               <Stack
                 justifyContent={isOddItem ? "flex-start" : "flex-end"}
-                sx={{ flex: "0 0 5rem" }}
+                sx={{ flex: "0 0 6rem" }}
               >
                 <Typography
                   fontSize={24}
@@ -63,7 +63,7 @@ export const DesktopTimeline = () => {
                 }}
               />
 
-              <Box sx={{ flex: "0 0 5rem" }} />
+              <Box sx={{ flex: "0 0 6rem" }} />
             </Stack>
           </Animate>
         );

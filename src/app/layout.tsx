@@ -3,6 +3,7 @@ import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider } from "@mui/material";
 import theme from "@/app/theme";
+import ToastProvider from "@/components/ToastProvider";
 
 export const metadata: Metadata = {
   title: "Somnium | Consultoria Financeira",
@@ -19,7 +20,9 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body>
         <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            <ToastProvider>{children}</ToastProvider>
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>

@@ -28,7 +28,7 @@ export const howWeCanHelpItems = [
   },
   {
     icon: icon2.src,
-    text: "Prestar informações que indiquem o <strong>caminho do crescimento</strong>",
+    text: "Apresentar informações que indiquem o <strong>caminho do crescimento</strong>",
   },
   {
     icon: icon3.src,

@@ -27,7 +27,7 @@ export const HowItWorksSectionDesktop = (
             </Typography>
 
             <Typography maxWidth="30ch">
-              Através de uma metodologia simples, vamos implementar os processo
+              Através de uma metodologia simples, vamos implementar os processos
               necessários para executar as rotinas do financeiro da sua empresa
             </Typography>
           </Stack>

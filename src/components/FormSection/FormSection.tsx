@@ -1,9 +1,13 @@
 "use client";
 
 import {
+  Backdrop,
   Box,
   Button,
+  CircularProgress,
   Container,
+  Dialog,
+  DialogActions,
   Stack,
   TextField,
   Typography,
@@ -12,12 +16,22 @@ import { Form, Formik, FormikErrors } from "formik";
 import { CustomTextField } from "../Forms/CustomTextField";
 import { PhoneInput } from "../Forms/PhoneInput";
 import { validateEmail } from "../utils";
+import { sendEmail } from "@/send-email";
+import { toast } from "react-toastify";
+import LoadingButton from "@mui/lab/LoadingButton";
+import { useState } from "react";
+import Lottie from "react-lottie";
+import animationData from "../../lotties/success.json";
 
 export interface IFormSectionProps {}
 
 export const FormSection = (props: IFormSectionProps) => {
-  const handleValidate = (values: IValues) => {
-    const errors: FormikErrors<IValues> = {};
+  const [sendingState, setSendingState] = useState<
+    "none" | "sending" | "success" | "error"
+  >("none");
+
+  const handleValidate = (values: IContactFormValues) => {
+    const errors: FormikErrors<IContactFormValues> = {};
 
     if (values.name === "") {
       errors.name = "Obrigatório";
@@ -37,54 +51,118 @@ export const FormSection = (props: IFormSectionProps) => {
   };
 
   return (
-    <Box sx={{ backgroundColor: "primary.main", py: 10 }} id="contato">
-      <Container maxWidth="sm">
-        <Stack gap={4}>
-          <Typography variant="h2" color="white">
-            Acha que podemos lhe ajudar? Fale conosco!
+    <>
+      <Box sx={{ backgroundColor: "primary.main", py: 10 }} id="contato">
+        <Container maxWidth="sm">
+          <Stack gap={4}>
+            <Typography variant="h2" color="white">
+              Acha que podemos lhe ajudar? Fale conosco!
+            </Typography>
+
+            <Formik
+              initialValues={{ name: "", email: "", phone: "", message: "" }}
+              onSubmit={async (values, { resetForm }) => {
+                setSendingState("sending");
+
+                try {
+                  await sendEmail(values);
+
+                  resetForm();
+
+                  setSendingState("success");
+                } catch {
+                  toast(
+                    "Houve um erro ao realizar seu cadastro. Tente novamente mais tarde.",
+                    {
+                      type: "error",
+                    }
+                  );
+
+                  setSendingState("error");
+                }
+              }}
+              validate={handleValidate}
+            >
+              <Form>
+                <Stack gap={2}>
+                  <CustomTextField
+                    name="name"
+                    textFieldProps={{ placeholder: "Seu nome *" }}
+                  />
+
+                  <CustomTextField
+                    name="email"
+                    textFieldProps={{ placeholder: "Seu e-mail *" }}
+                  />
+
+                  <PhoneInput name="phone" placeholder="Telefone *" />
+
+                  <CustomTextField
+                    name="message"
+                    textFieldProps={{
+                      multiline: true,
+                      placeholder: "Conta pra gente! O que você precisa?",
+                      rows: 4,
+                    }}
+                  />
+
+                  <Button variant="contained" color="secondary" type="submit">
+                    Enviar
+                  </Button>
+                </Stack>
+              </Form>
+            </Formik>
+          </Stack>
+        </Container>
+      </Box>
+
+      <Backdrop open={sendingState === "sending"}>
+        <CircularProgress />
+      </Backdrop>
+
+      <Dialog open={sendingState === "success"}>
+        <Box maxWidth="25rem">
+          <Lottie
+            options={{
+              loop: false,
+              autoplay: true,
+              animationData: animationData,
+              rendererSettings: {
+                preserveAspectRatio: "xMidYMid slice",
+              },
+            }}
+            height="100%"
+            width="100%"
+          />
+        </Box>
+
+        <Stack sx={{ px: 4 }} alignItems="center" gap={2}>
+          <Typography fontWeight="bold" fontSize={32} textAlign="center">
+            Recebemos seu contato!
           </Typography>
 
-          <Formik
-            initialValues={{ name: "", email: "", phone: "", message: "" }}
-            onSubmit={() => {}}
-            validate={handleValidate}
-          >
-            <Form>
-              <Stack gap={2}>
-                <CustomTextField
-                  name="name"
-                  textFieldProps={{ placeholder: "Seu nome *" }}
-                />
-
-                <CustomTextField
-                  name="email"
-                  textFieldProps={{ placeholder: "Seu e-mail *" }}
-                />
-
-                <PhoneInput name="phone" placeholder="Telefone *" />
-
-                <CustomTextField
-                  name="message"
-                  textFieldProps={{
-                    multiline: true,
-                    placeholder: "Conta pra gente! O que você precisa?",
-                    rows: 4,
-                  }}
-                />
-
-                <Button variant="contained" color="secondary" type="submit">
-                  Enviar
-                </Button>
-              </Stack>
-            </Form>
-          </Formik>
+          <Typography textAlign="center" maxWidth="32ch">
+            Fique atento! Em breve um especialista vai entrar em contato com
+            você.
+          </Typography>
         </Stack>
-      </Container>
-    </Box>
+
+        <Box sx={{ p: 4, width: "100%" }}>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => setSendingState("none")}
+            fullWidth
+          >
+            Entendi
+          </Button>
+        </Box>
+      </Dialog>
+    </>
   );
 };
 
-interface IValues {
+export interface IContactFormValues {
   name: string;
   email: string;
   phone: string;

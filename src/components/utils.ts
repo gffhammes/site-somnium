@@ -1,4 +1,4 @@
-export const scrollTo = (id: string, offset?: number) => {
+export const scrollToId = (id: string, offset?: number) => {
   const target = document.getElementById(id);
 
   if (!target) return;
@@ -11,8 +11,12 @@ export const scrollTo = (id: string, offset?: number) => {
 
   const topDistance = getTopDistance();
 
+  scrollTo(topDistance);
+};
+
+export const scrollTo = (scroll: number) => {
   window.scrollTo({
-    top: topDistance,
+    top: scroll,
     behavior: "smooth",
   });
 };
@@ -27,3 +31,7 @@ export const validateEmail = (email: string) => {
 
 export const sleep = (delay: number) =>
   new Promise((resolve) => setTimeout(resolve, delay));
+
+export const getMainWhatsAppLink = () => {
+  return "http://api.whatsapp.com/send?phone=47996537400&text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Somnium!";
+};

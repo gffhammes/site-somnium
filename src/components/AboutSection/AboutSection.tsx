@@ -13,13 +13,19 @@ export const AboutSection = (props: IAboutSectionProps) => {
           <Typography variant="h2">Um pouco sobre nós!</Typography>
 
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            doeiusmod tempor incididunt u labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip e ea commodo consequat. Duis aute irure dolor i
-            reprehenderit i voluptate velit ess cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui offici deserunt mollit anim id est laborum.
+            A Somnium Consultoria nasceu do nosso desejo de ajudar
+            empreendedores a transformarem suas empresas através de uma gestão
+            financeira clara, eficiente e descomplicada. Somos Jonathan e
+            Silvia, um casal que acredita que o sucesso de um negócio começa
+            pelo controle das finanças – e foi com essa visão que decidimos unir
+            forças para criar a Somnium. <br />
+            <br />
+            Com anos de experiência no universo financeiro e uma abordagem
+            acessível e humanizada, ajudamos micro, pequenas e médias empresas a
+            organizarem suas finanças, tomarem decisões estratégicas e
+            alcançarem resultados sustentáveis. Nosso trabalho não se limita a
+            números – nosso propósito é trazer tranquilidade, segurança e
+            crescimento para quem empreende.
           </Typography>
 
           <Stack direction="row" gap={2}>

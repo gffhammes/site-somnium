@@ -1,13 +1,21 @@
 "use client";
 
-import animationData from "../../lotties/success.json";
 import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 
 const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 export interface ISuccessLottieProps {}
 
 export const SuccessLottie = (props: ISuccessLottieProps) => {
+  const [animationData, setAnimationData] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("/lotties/success.json")
+      .then((res) => res.json())
+      .then((data) => setAnimationData(data));
+  }, []);
+
   return (
     <Lottie
       options={{

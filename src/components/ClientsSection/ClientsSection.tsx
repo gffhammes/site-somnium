@@ -1,10 +1,10 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import logo1 from "../../../public/images/clientes/logo-2048x1850.png";
-import logo2 from "../../../public/images/clientes/Input-Logo.webp";
-import logo3 from "../../../public/images/clientes/logo-2048x1850.png";
-import logo4 from "../../../public/images/clientes/Input-Logo.webp";
-import logo5 from "../../../public/images/clientes/logo-2048x1850.png";
-import logo6 from "../../../public/images/clientes/Input-Logo.webp";
+import logo1 from "../../../public/images/clientes/1.png";
+import logo2 from "../../../public/images/clientes/2.png";
+import logo3 from "../../../public/images/clientes/3.png";
+import logo4 from "../../../public/images/clientes/4.png";
+import logo5 from "../../../public/images/clientes/Frame 45.png";
+import logo6 from "../../../public/images/clientes/Frame 46.png";
 import Image from "next/image";
 import { ScrollButton } from "../ScrollButton";
 import { Animate } from "../Animate";
@@ -23,7 +23,7 @@ export const ClientsSection = (props: IClientsSectionProps) => {
           <Box
             display="grid"
             gridTemplateColumns={{ xs: "1fr 1fr", md: "1fr 1fr 1fr" }}
-            gridAutoRows="8rem"
+            gridAutoRows={{ xs: "8rem", md: "10rem" }}
             gap={{ xs: 4, md: 10 }}
           >
             {clients.map((client, index) => (
@@ -80,26 +80,26 @@ export const ClientsSection = (props: IClientsSectionProps) => {
 const clients = [
   {
     logo: logo1.src,
-    name: "Roda Pizza Araldi",
+    name: "Arcanjo",
   },
   {
     logo: logo2.src,
-    name: "Input Gestão de Tráfego",
+    name: "Tamila Store",
   },
   {
     logo: logo4.src,
-    name: "Input Gestão de Tráfego2",
+    name: "Result",
   },
   {
     logo: logo3.src,
-    name: "Roda Pizza Araldi2",
+    name: "Robson Barber Shop",
   },
   {
     logo: logo5.src,
-    name: "Roda Pizza Araldi3",
+    name: "Input Gestão de Tráfego",
   },
   {
     logo: logo6.src,
-    name: "Input Gestão de Tráfego3",
+    name: "Roda Pizza Araldi",
   },
 ];

@@ -47,7 +47,7 @@ export const HowWeCanHelpSectionDesktop = (
                     transition={{ duration: 1 }}
                     responsiveDelay={{ sm: index * 0.5 }}
                   >
-                    <Stack alignItems="center" gap={2}>
+                    <Stack alignItems="center" gap={2} sx={{ width: "16rem" }}>
                       <Image src={item.icon} alt="" height={150} width={150} />
 
                       <Typography

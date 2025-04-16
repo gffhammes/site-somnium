@@ -4,7 +4,7 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider } from "@mui/material";
 import theme from "@/app/theme";
 import ToastProvider from "@/components/ToastProvider";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Somnium | Consultoria Financeira",
@@ -20,7 +20,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <GoogleTagManager gtmId="GTM-NDG5W2GD" />
-      <GoogleAnalytics gaId="G-2NHBP7JWQY" />
 
       <body>
         <AppRouterCacheProvider>

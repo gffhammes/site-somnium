@@ -33,7 +33,11 @@ export const HowItWorksSectionMobile = (
 
           <MobileTimeline />
 
-          <ScrollButton targetSection="contato" variant="contained">
+          <ScrollButton
+            targetSection="contato"
+            variant="contained"
+            id="timeline-cta"
+          >
             Entre já em contato!
           </ScrollButton>
         </Stack>

@@ -66,6 +66,7 @@ export const HowWeCanHelpSectionDesktop = (
               targetSection="contato"
               variant="contained"
               color="secondary"
+              id="help-cta"
             >
               Conheça nossos planos{" "}
             </ScrollButton>

@@ -82,6 +82,7 @@ export const HeroSection = (props: IHeroSectionProps) => {
           sx={{ whiteSpace: "nowrap" }}
           targetSection="conteudo"
           offset={-50}
+          id="hero-cta"
         >
           Clique aqui e saiba mais!
         </ScrollButton>

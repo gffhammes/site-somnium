@@ -34,6 +34,7 @@ export const WhatsAppFloatingButton = () => {
         color="inherit"
         name="botão whatsapp"
         aria-label="botão whatsapp"
+        id="whatsapp-cta"
       >
         <WhatsAppIcon
           fontSize="inherit"

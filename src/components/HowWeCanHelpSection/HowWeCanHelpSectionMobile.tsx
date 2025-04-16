@@ -35,6 +35,7 @@ export const HowWeCanHelpSectionMobile = (
                 targetSection="contato"
                 variant="contained"
                 color="secondary"
+                id="help-cta"
               >
                 Saiba mais
               </ScrollButton>

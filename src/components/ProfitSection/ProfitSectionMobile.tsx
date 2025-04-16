@@ -19,6 +19,7 @@ export const ProfitSectionMobile = (props: IProfitSectionMobileProps) => {
           <ScrollButton
             targetSection="contato"
             variant="contained"
+            id="profit-cta"
             color="secondary"
           >
             Vamos descobrir juntos!

@@ -21,6 +21,7 @@ export const ProfitSectionDesktop = (props: IProfitSectionDesktopProps) => {
               targetSection="contato"
               variant="contained"
               color="secondary"
+              id="profit-cta"
             >
               Vamos descobrir juntos!
             </ScrollButton>

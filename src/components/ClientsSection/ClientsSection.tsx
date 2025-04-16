@@ -67,6 +67,7 @@ export const ClientsSection = (props: IClientsSectionProps) => {
             targetSection="contato"
             variant="contained"
             color="secondary"
+            id="clients-cta"
             sx={{ mx: "auto" }}
           >
             Seja o próximo a fazer parte disso!
